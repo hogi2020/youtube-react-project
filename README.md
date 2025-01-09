@@ -1,77 +1,20 @@
-# Getting Started with Create React App
+## React에 대하여
+- 리액트 컴포넌트는 리액트 애플리케이션의 구성요소로, UI를 작은 단위로 분리하여 재사용 가능하고 모듈화된 코드로 관리할 수 있도록 도와줍니다.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- 컴포넌트는 화면의 여러 부분을 독립적으로 생성하고 관리할 수 있도록 도와주며, 각각의 컴포넌트는 자체적인 상태(state)와 속성(props)을 가질 
+수 있습니다.
 
-## Available Scripts
+- 클래스 컴포넌트 : ES6 클래스를 확장하여 만든 컴포넌트 입니다. 클래스 컴포넌트는 라이프사이클 메서드를 사용할 수 있어서 컴포넌트의 생명 주기 동안 다양한 동작을 처리할 수 있습니다.
 
-In the project directory, you can run:
+- 함수형 컴포넌트 : 함수로 작성된 컴포넌트로, React Hooks를 통해 상태 관리와 라이프사이클 이벤트 처리를 할 수 있게 되었습니다.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- .jsx는 JavaScript XML의 약자로, 리액트에서 UI를 작성하기 위한 문법 확장입니다. JS 내에서 HTML을 작성할 수 있어 가독성을 높아졌습니다.
 
 
 
-### Youtube 리액트 프로젝트
+<br />
+
+
 1. 프로젝트 셋팅
 ```
 $ npx create-react-app .
