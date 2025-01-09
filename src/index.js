@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App.js';
 import './assets/scss/style.scss';
 
+
 // createRoot 메서드를 사용하여, root 변수를 생성합니다.
 // 이것은 React Concurrent Mode에서 사용되는 리액트 루트 입니다.
 const root = ReactDOM.createRoot(document.getElementById('root'));
