@@ -32,9 +32,18 @@
 - useLocation : pathname(현재URL), search(쿼리스트링), hash(#해시), state(상태전달)
 
 
-## React Suspense
+## React Suspense & Lazy Loding
 - React에서 비동기적으로 데이터나 컴포넌트를 불러오는 과정에서 대기 상태를 처리하기 위한 컴포넌트 입니다.
 - 이 컴포넌트를 사용하면 데이터나 컴포넌트가 로딩되기를 기다릴 수 있으며, 대체 컨텐츠를 표시할 수 있습니다.
+
+
+##  SEO
+- SEO는 "Search Engine Optimization"의 약어로, 검색 엔진 최적화를 의미합니다.
+- SEO는 웹사이트나 웹 페이지를 검색 엔진(예: Google, Bing, Yahoo)에서 높은 순위로 나타나도록 최적화하는 프로세스와 전략을 나타냅니다.
+- 이를 통해 웹사이트가 검색 결과 페이지(SERP)에서 더 높은 순위에 나타나고 노출됩니다. 
+- 더 많은 유기적(자연적) 트래픽을 확보하려는 목적으로 사용됩니다.
+
+
 
 
 
