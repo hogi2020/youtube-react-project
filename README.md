@@ -21,6 +21,14 @@
 <br />
 
 
+## React Hook
+- React Hook은 리액트 클래스형 컴포넌트에서 이용하던 코드를 함수형 컴포넌트에 맞게 만들어졌습니다.
+- 반복문이나 조건문 혹은 중첩된 함수 내에서 Hook을 호출하면 안된다.
+- useState : 상태를 관리하는 Hook
+- useEffect : ActionListener와 같은 역할을 하는 Hook으로 의존성 배열에 해당값이 변할 때마다 함수가 실행된다.
+- useLocation : pathname(현재URL), search(쿼리스트링), hash(#해시), state(상태전달)
+
+
 1. 프로젝트 셋팅
 ```
 $ npx create-react-app .
