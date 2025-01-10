@@ -1,64 +1,46 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-
-import { CiBaseball } from "react-icons/ci";
-import { CiCoins1 } from "react-icons/ci";
-import { CiBoxes } from "react-icons/ci";
-import { CiBullhorn } from "react-icons/ci";
-import { CiCoffeeCup } from "react-icons/ci";
-import { CiDumbbell } from "react-icons/ci";
-import { CiFries } from "react-icons/ci";
-import { CiMoneyBill } from "react-icons/ci";
-
-import { AiFillGithub } from "react-icons/ai";
-import { AiOutlineCodepen } from "react-icons/ai";
-import { AiFillYoutube } from "react-icons/ai";
-import { AiOutlineInstagram } from "react-icons/ai";
+import { Link, useLocation } from 'react-router-dom'
+import { headerMenus, searchKeyword, snsLink } from "../../data/header";
 
 const Header = () => {
+    const location = useLocation();
+
     return (
         <header id='header' role='banner'>
             <h1 className='header__logo'>
-                <a href="/">
-                    <em aria-hidden='true'></em>
+                <Link to="/">
+                    <em></em>
                     <span>webs<br />youtube</span>
-                </a>
+                </Link>
             </h1>
 
-            <nav className='header__menu'>
+            <div className='header__menu'>
                 <ul className='menu'>
-                    <li className='active'><Link to='/'><CiBaseball />웹스토리보이</Link></li>
-                    <li><Link to="/today"><CiMoneyBill />추천영상</Link></li>
-                    <li><Link to="/developer"><CiCoins1 />추천개발자</Link></li>
-                    <li><Link to="/webd"><CiBoxes />웹디자인기능사</Link></li>
-                    <li><Link to="/website"><CiBullhorn />웹표준사이트</Link></li>
-                    <li><Link to="/gsap"><CiCoffeeCup />GSAP Parallax</Link></li>
-                    <li><Link to="/port"><CiDumbbell />포트폴리오 사이트</Link></li>
-                    <li><Link to="/youtube"><CiFries />유튜브 클론 사이트</Link></li>
+                    {headerMenus.map((menu, key) => (
+                        <li key={key} className={location.pathname === menu.src? 'active':''}>
+                            <Link to={menu.src}>{menu.icon}{menu.title}</Link>
+                        </li>
+                    ))}
                 </ul>
 
                 <ul className='keyword'>
-                    <li><Link to='/search/webstoryboy'>webstoryboy</Link></li>
-                    <li><Link to='/search/html'>HTML</Link></li>
-                    <li><Link to='/search/css'>CSS</Link></li>
-                    <li><Link to='/search/javascript'>JavaScript</Link></li>
-                    <li><Link to='/search/react.js'>React.js</Link></li>
-                    <li><Link to='/search/vue.js'>Vue.js</Link></li>
-                    <li><Link to='/search/next.js'>Next.js</Link></li>
-                    <li><Link to='/search/node.js'>Node.js</Link></li>
-                    <li><Link to='/search/sql'>SQL</Link></li>
-                    <li><Link to='/search/React Portfolio'>portfolio</Link></li>
-                    <li><Link to='/search/NewJeans'>music</Link></li>
+                    {searchKeyword.map((keyword, key) => (
+                        <li key={key} className={location.pathname === keyword.src? 'active':''}>
+                            <Link to={keyword.src}>{keyword.title}</Link>
+                        </li>
+                    ))}
                 </ul>
-            </nav>
+            </div>
 
             <div className='header__sns'>
                 <ul>
-                    {/* rel='noopener noreferrer'은 새탭/윈도우에서 링크를 열 때, 보안 및 개인정보보호 측면에서 안전한 방식으로 열리게 됩니다. */}
-                    <li><a href="https://github.com/webstoryboy" rel='noopener noreferrer'><AiFillGithub /></a></li>                    
-                    <li><a href='https://www.youtube.com/webstoryboy' rel='noopener noreferrer'><AiFillYoutube /></a></li>
-                    <li><a href='https://codepen.io/webstoryboy' rel='noopener noreferrer'><AiOutlineCodepen /></a></li>
-                    <li><a href='https://www.instagram.com/webstoryboy' rel='noopener noreferrer'><AiOutlineInstagram /></a></li>
+                    {snsLink.map((sns, key) => (
+                        <li key={key}>
+                            <a href={sns.url} target='_blank' rel='noopener noreferrer' aria-label='{sns.title}'>
+                                <span>{sns.icon}</span>
+                            </a>
+                        </li>
+                    ))}
                 </ul>
             </div>
         </header>
@@ -66,3 +48,17 @@ const Header = () => {
 }
 
 export default Header
+
+
+/**
+ * Map 메서드를 통해서 데이터를 하나씩 호출합니다.
+ * for문과 map() 메서드는 데이터값을 출력하지만, 
+ * 출력한 값을 배열로 반환해주는 것에 차이가 있습니다.
+ * map() 메서드는 인자 값으로 3가지 값을 출력할 수 있습니다. 
+ */
+
+/**
+ * useLocation()는 리액트 훅
+ * 주소값이 있으면 active를 붙여주는 삼항연산자를 사용하였습니다.
+ * location.pathname === menu.src 이 부분이 일치하면 active가 추가되고 아니면 빈문자열이 표현됩니다.
+ */
