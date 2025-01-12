@@ -2,7 +2,7 @@
 // 브라우저 라우팅을 설정하고 경로별로 컴포넌트를 매핑하는데 사용합니다.
 import React, { lazy, Suspense } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Main from './components/section/Main.jsx';
+import Main from './components/section/Main';
 
 const Home = lazy(() => import('./pages/Home'))
 const Today = lazy(() => import('./pages/Today'))
